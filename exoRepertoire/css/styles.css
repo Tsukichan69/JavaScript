@@ -1,0 +1,19 @@
+body{
+    padding: 10px;
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#blocPersonnes {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#blocRecherches {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#formAjoutPersonne, #listePersonne, #formRechercheParAge, #formRechercheParNom {
+    width: 400px;
+}

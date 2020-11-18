@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bibliothèque de Films</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<header>
+		<h1>Bibliothèque de films</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="films.html" class="selected">Films</a></li>
+			<li><a href="series.html">Séries</a></li>
+		</ul>
+	</nav>
+	<main>
+		<section id="content">
+			<!--S'occupe d'afficher le contenu général : la liste des films-->
+			<h2>Voici notre préselection de films cultes</h2>
+			<div>
+				<h4>Filtrer par genre : </h4>
+				<select id="selectGenre" onchange="filtrerParGenreEtDecennie()">
+					<!--onchange lance une fonction lorsque l'utilisateur fait un choix-->
+					<option value="tous">Tous</option>
+					<option value="sci-fi">Science-Fiction</option>
+					<option value="guerre">Guerre</option>
+					<option value="horreur">Horreur</option>
+					<option value="drame">Drame</option>
+					<option value="comedie">Comédie</option>
+					<option value="thriller">Thriller</option>
+				</select>
+			</div>
+			<div>
+				<h4>Filtrer par décennie : </h4>
+				<select id="selectDecennie" onchange="filtrerParGenreEtDecennie()">
+					<!--onchange lance une fonction lorsque l'utilisateur fait un choix-->
+					<option value="tous">Tous</option>
+					<option value="1950">1950</option>
+					<option value="1960">1960</option>
+					<option value="1970">1970</option>
+					<option value="1980">1980</option>
+					<option value="1990">1990</option>
+					<option value="2000">2000</option>
+					<option value="2010">2010</option>
+				</select>
+			</div>
+			<div id="listeFilms" class="listeFilms">
+				<!--
+					<article>
+						//Inception
+					</article>
+					<article>
+						//Dents mer
+					</article>
+				-->
+			</div>
+		</section>
+		<section id="contentDetails">
+			<!--Affiche les détails lorsque l'on clique sur un film-->
+		</section>
+		<div id="lienRetour">
+			<a href="#" onclick="retourListe()">Retour à la liste</a>
+	</main>
+	<script src="./js/index.js"></script>
+	<script src="./js/films.js"></script>
+</body>
+</html>

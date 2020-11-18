@@ -1,0 +1,118 @@
+/*============================================
+=== Bibliothèque de films ===
+==============================================
+*/
+:root {
+	/*C'est ici qu'on définit l'ensemble des variables qu'on va appliquer dans le document
+	la pseudo classe :root sert spécifiquement pour déclarer les variables, en ciblant la racine de l'arbre (HTML)*/
+	--maMargeClassique: 2em;
+	--couleurSecondaire: #ccc;
+}
+/*Très pratique pour modifier dans tout le doc !*/
+html {
+	font-size: 100%;
+	/*Définition de la variable CSS*/
+	--couleurPrincipale: rgb(18,149,224);
+}
+body, h1, ul {
+	margin: 0;
+}
+header {
+	background-color: var(--couleurPrincipale);
+	/* On dit qu'on utilise la variable en utilisant "var" ! (contrairement au JS où var sert à définir une variable) */
+	text-align: center;
+	padding: var(--maMargeClassique) 0;
+}
+h2, h4, h3 {
+	text-align: center;
+}
+h2, p:last-of-type, h3 {
+	color: var(--couleurPrincipale);
+}
+p {
+	text-align: center;
+	font-weight: 700;
+}
+h4{
+	margin: 0 0 10px 0;
+}
+div+div h4{
+	margin-top: 10px;
+}
+#content div:first-of-type, #content div:nth-of-type(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+nav{
+	background-color : var(--couleurSecondaire);
+}
+nav ul {
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+	list-style-type: none;
+}
+nav li {
+	margin: 0 var(--maMargeClassique);
+	padding: 10px 0;
+}
+nav a {
+	text-decoration: none;
+	color: #333;
+}
+nav a:hover, .selected {
+	color: var(--couleurPrincipale);
+}
+.listeFilms, .listeSeries {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-left: 10%;
+}
+.listeFilms article, .listeSeries article {
+	margin-right: 20px;
+}
+figure {
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+figcaption {
+    position: absolute;
+    background-color: rgba(0,0,0,1);
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: large;
+    color:#fff;
+    padding: 50% 0;
+    bottom: -29px;
+    /* width: 200px; /* si on connait la taille de l'image et qu'elle reste fixe*/
+    left: 0; 
+    right: 0; /* conséquence de mettre un right et un left : étire le 
+    block*/
+    opacity: 0;
+    transition: bottom 300ms ease-out, opacity 300ms ease-out;
+}
+figure:hover figcaption { 
+	bottom: 0;
+	top:0;
+    opacity: 0.7;
+}
+.listeFilms article img, .listeSeries article img {
+	height: 350px;
+	width: auto;
+	border-radius: 10px;
+}
+#lienRetour {
+	display: none;
+}
+h3{
+	font-size: 2em;
+}
+.detailsFilms {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

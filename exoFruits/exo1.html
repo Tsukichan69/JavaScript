@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma liste de Fruits</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/exo.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Liste des fruits :<br />
+                <select id="liste_fruits" size="8" style="width:90px;">
+                    <option value="ananas">Ananas</option>
+                    <option value="banane">Banane</option>
+                    <option value="citron">Citron</option>
+                    <option value="fraise">Fraise</option>
+                    <option value="orange">Orange</option>
+                    <option value="pomme">Pomme</option>
+                    <option value="raisin">Raisin</option>
+                </select>
+            </td>
+            <td>
+                <button id="ajouter" disabled>Ajouter</button><br />
+                <button id="supprimer" disabled>Supprimer</button>
+            </td>
+            <td>Mon panier :<br />
+                <select id="panier" size="8" style="width:90px;">
+                </select>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+html {
+	font-size: 90%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper {
+	text-align: center;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+}
+h1, ul {
+	margin: 0;
+	padding: 0;
+}
+h1 {
+	order: 1;
+}
+li {
+	background-color: #aaa;
+	border: 1px solid #000;
+	border-radius: 10px;
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 10px;
+}
+form {
+	margin: 30px 0;
+}

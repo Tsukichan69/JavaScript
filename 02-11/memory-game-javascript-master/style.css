@@ -1,0 +1,179 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+html {
+	--card-height: 200px;
+	--card-width: 200px;
+	--card-padding: 12px;
+	--color-primary: #8dd2ff;
+	--color-font: black;
+}
+
+body {
+	margin: 0;
+	/* background-color: #3a7eff; */
+	background-color: var(--color-primary);
+	color: var(--color-font);
+	font-family: 'Indie Flower', cursive;
+}
+
+main {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+			-ms-flex-direction: column;
+					flex-direction: column;
+	-webkit-box-align: center;
+			-ms-flex-align: center;
+					align-items: center;
+}
+
+h1 {
+	text-align: center;
+	font-size: 3rem;
+	margin: 1.6rem;
+}
+
+p, button {
+	font-size: 2rem;
+}
+
+p {
+	margin: 2px;
+}
+
+.game {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+
+.card {
+	-webkit-transition: .6s;
+	-o-transition: .6s;
+	transition: .6s;
+	position: relative;
+	margin: 16px;
+	padding: var(--card-padding);
+	border: 1px solid rgba(255, 255, 255, .5);
+	border-radius: 8px;
+	height: var(--card-height);
+	width: var(--card-width);
+	-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+}
+
+.card > div {
+	height: 100%;
+	width: 100%;
+}
+
+.background > img {
+	height: 100%;
+	width: 100%;
+	/* object-fit: cover; */
+}
+
+.reveal {
+	-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+}
+
+.pokemon {
+	z-index: 5;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	top: var(--card-padding);
+	height: var(--card-height);
+	width: var(--card-width);
+	-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+	background-color: rgb(255, 255, 255);
+}
+
+/* Bouton */
+button {
+	/* background-color: #fff; */
+	background-color: #fd9800;
+	font-family: 'Indie Flower', cursive;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	cursor: pointer;
+}
+
+button#play {
+	background-color: #fff;
+	color: var(--color-primary);
+}
+
+#play:active {
+	background-color: #fd9800dd;
+}
+
+/* Modal */
+.modal-container {
+	visibility: hidden;
+	z-index: 2;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+			-ms-flex-pack: center;
+					justify-content: center;
+	-webkit-box-align: center;
+			-ms-flex-align: center;
+					align-items: center;
+}
+
+.modal-container > .modal {
+	padding: 1rem 2rem;
+	border-radius: 8px;
+	font-size: 2.5rem;
+	background-color: #fff;
+	color: black;
+}
+
+.modal p {
+	text-align: center;
+}
+
+@media screen and (max-width: 525px) {
+	html {
+		--card-height: 125px;
+		--card-width: 125px;
+		--card-padding: 10px;
+	}
+	.card {
+		margin: 8px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	html {
+		--card-height: 100px;
+		--card-width: 100px;
+		--card-padding: 8px;
+	}
+	.card {
+		margin: 4px;
+	}
+}

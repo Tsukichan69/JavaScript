@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-do list</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/to-do.js" defer></script>
+	<link rel="stylesheet" href="./css/to-do.css">
+	<style>
+		.whitePlh::placeholder{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<h1>To-do List</h1>
+		<ul>
+			<li>Acheter du pain de mie</li>
+			<li>Acheter du sel</li>
+			<li>Acheter du poivre</li>
+			<li>Acheter du miel</li>
+			<li>Acheter du pain</li>
+		</ul>
+		<form action=""><input type="text" name="item" id="item" placeholder="élément à ajouter à la liste"><input type="submit" id="ajouter"></form>
+	</div>
+</body>
+</html>

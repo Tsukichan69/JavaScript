@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Répertoire</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- div#blocPersonnes>form[id="formAjoutPersonne"]>h3{Ajouter une personne :}+fieldset>div*3>label+input -->
+    <div id="blocPersonnes">
+        <!-- ====================== formulaire ajout personne ======================= -->
+        <form id="formAjoutPersonne" onsubmit="validerNouvellePersonne(event);">
+            <h3>Ajouter une personne :</h3>
+            <fieldset><!-- facultative-->
+                <legend>La personne</legend><!-- facultative-->
+                <div>
+                    <label for="nom">Nom :*</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prénom :*</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="age">Âge :*</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+                <input type="submit" value="Ajouter la personne" />
+            </fieldset>
+        </form>
+        <!-- ====================== affichage des personnes ======================= -->
+        <!-- div#listePersonnes>h3{Liste des personnes déjà ajoutées : }+ul#resultat -->
+        <div id="listePersonnes">
+            <h3>Liste des personnes déjà ajoutées : </h3>
+            <ul id="resultat">
+                <!-- javascript créera les li  -->
+            </ul>
+        </div><!-- listepersonne -->
+    </div><!-- blocPersonnes -->
+    <!-- =========================== LES RECHERCHES =========================== -->
+    <!-- div#blocRecherche>form*2>h3{Rechercher une personne par son âge}+fieldset>div>label+input -->
+    <div id="blocRecherches">
+        <form id="formRechercheAge" onsubmit="rechercherParAge(event);">
+            <h3>Rechercher une personne par son âge</h3>
+            <fieldset>
+                <div>
+                    <label for="rechercheAge">Âge de la personne</label>
+                    <input type="number" id="rechercheAge" name="rechercheAge">
+                </div>
+                <input type="submit" value="Rechercher">
+            </fieldset>
+        </form>
+        <form id="formRechercheNom"  onsubmit="rechercherParNom(event);">
+            <h3>Rechercher une personne par son Nom</h3>
+            <fieldset>
+                <div>
+                    <label for="rechercheNom">Nom de la personne</label>
+                    <input type="text" id="rechercheNom" name="rechercheNom">
+                </div>
+                <input type="submit" value="Rechercher">
+            </fieldset>
+        </form>
+    </div><!-- blocRecherche-->
+    <script src="js/repertoire.js"></script>
+</body>
+</html>
