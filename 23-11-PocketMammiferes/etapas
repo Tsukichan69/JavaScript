@@ -1,0 +1,24 @@
+Objectifs :
+créer une page web permettant :
+- d'afficher une liste de mammifères
+- de pouvoir créer un mammifère (l'ajouter à la liste et l'afficher)
+- de pouvoir supprimer un mammifère de la liste
+- de pouvoir modifier un mammifère préalablement ajouté
+
+Etapes :
+(- Créer une page web "type"
+- Y inclure un formulaire d'ajout de mammifères
+- Créer en JS la liste des mammifères qui va s'afficher, en donnant les caractéristiques de base d'un mammifère
+- Ajouter l'option de suppression
+- Ajouter l'option de modification)
+CORRECTION :
+Liste des étapes : 
+1) Définir ce qu'est un mamifère et ce que l'on souhaite représenter
+2) Afficher les propriétés d'un mamifère (mise en forme de l'affichage d'un mamifère)
+3) Afficher 5 mamifères
+4) Mettre en place un formulaire de création de mamifère 
+5) Mettre en place la fonctionnalité d'édition de mamifère 
+6) Mettre en place la fonctionnalité de suppression d'un mamifère
+
+1) Nom (Ornithorynque)/ Ordre (monotrème) / Image
+2) 
