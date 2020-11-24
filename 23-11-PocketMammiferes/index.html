@@ -5,50 +5,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pocket Mammifères</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+	<script src="./dist/index.js" defer></script>
 </head>
 <body>
 	<h1 class="text-center mt-4 mb-5">Créez votre pokedex de mammifères !</h1>
-	<div class ="container d-flex justify-content-center flex-wrap">
-		<div class="card text-white bg-secondary mb-3 mr-2 ml-2" style="max-width: 20rem;">
-			<div class="card-header text-center">Mammifère</div>
-			<div class="card-body">
-				<h4 class="card-title text-center">Carnivore</h4>
-				<p class="card-text text-center">Chat</p>
-				<figure><img class="w-100" src="./media/téléchargement (1).jpeg" alt="image de l'animal"></figure>
-			</div>
-		</div>
-		<div class="card text-white bg-secondary mb-3 mr-2 ml-2" style="max-width: 20rem;">
-			<div class="card-header text-center">Mammifère</div>
-			<div class="card-body">
-				<h4 class="card-title text-center">Lagomorphe</h4>
-				<p class="card-text text-center">Lapin</p>
-				<figure><img class="w-100 img-responsive" src="./media/téléchargement (6).jpeg" alt="image de l'animal"></figure>
-			</div>
-		</div>
-		<div class="card text-white bg-secondary mb-3 mr-2 ml-2" style="max-width: 20rem;">
-			<div class="card-header text-center">Mammifère</div>
-			<div class="card-body">
-				<h4 class="card-title text-center">Marsupial</h4>
-				<p class="card-text text-center">Kangourou</p>
-				<figure><img class="w-100" src="./media/téléchargement (5).jpeg" alt="image de l'animal"></figure>
-			</div>
-		</div>
-		<div class="card text-white bg-secondary mb-3 mr-2 ml-2" style="max-width: 20rem;">
-			<div class="card-header text-center">Mammifère</div>
-			<div class="card-body">
-				<h4 class="card-title text-center">Monotrène</h4>
-				<p class="card-text text-center">Ornithorynque</p>
-				<figure><img class="w-100" src="./media/téléchargement (3).jpeg" alt="image de l'animal"></figure>
-			</div>
-		</div>
-		<div class="card text-white bg-secondary mb-3 mr-2 ml-2" style="max-width: 20rem;">
-			<div class="card-header text-center">Mammifère</div>
-			<div class="card-body">
-				<h4 class="card-title text-center">Ruminant</h4>
-				<p class="card-text text-center">Vache</p>
-				<figure><img class="w-100" src="./media/téléchargement.jpeg" alt="image de l'animal"></figure>
-			</div>
-		</div>
+	<div id ="listMam" class ="container d-flex justify-content-center flex-wrap">
+	</div>
+	<div class="container mt-5 text-center">
+		<form id="form">
+			<fieldset>
+				<legend>Ajouter votre propre Mammifère !</legend>
+				<div class="form-group">
+				<label for="ordre">Ordre du Mammifère</label>
+				<input type="text" class="form-control" id="ordre" placeholder="Ordre du Mammifère">
+				</div>
+				<div class="form-group">
+				<label for="nom">Nom du Mammifère</label>
+				<input type="text" class="form-control" id="nom" placeholder="Nom du Mammifère">
+				</div>
+				<div class="form-group">
+				<label for="image">Image de l'animal</label>
+				<input type="url" class="form-control" id="image" placeholder="Image de l'animal">
+				<button id= "submit" type="submit" class="btn btn-primary">Submit</button>
+				<div id="blocBoutonsEdition">
+					<button id ="modifier" type="button" class="btn btn-primary">Modifier</button>
+					<button type="button" class="btn btn-primary" onclick="annulerEdition()">Annuler</button>
+				</div>
+			</fieldset>
+		</form>
 	</div>
 </body>
 </html>
